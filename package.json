@@ -1,7 +1,6 @@
 {
-  "name": "docs",
-  "version": "0.0.0",
-  "private": true,
+  "name": "docsvnb",
+  "version": "1.0.0",
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
@@ -36,5 +35,23 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.",
+  "main": "babel.config.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tinboy16/docsvnb.git"
+  },
+  "keywords": [
+    "docsvnb"
+  ],
+  "author": "tinboy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tinboy16/docsvnb/issues"
+  },
+  "homepage": "https://github.com/tinboy16/docsvnb#readme"
 }
