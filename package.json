@@ -1,6 +1,6 @@
 {
   "name": "docsvnb",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
@@ -43,7 +43,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tinboy16/docsvnb.git"
+    "url": "https://github.com/tinboy16/docsvnb"
   },
   "keywords": [
     "docsvnb"
