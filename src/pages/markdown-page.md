@@ -1,7 +1,7 @@
 ---
-title: VNBnode
+title: Markdown page example
 ---
 
 # Markdown page example
 
-goodgame
+You don't need React to write simple standalone pages.

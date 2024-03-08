@@ -14,8 +14,8 @@ VNBnode是一群区块链领域的专业验证者/研究人员。我们的成员
 
 Visit our communities:
 
-Telegram Chat: [https://VNBnodechat](https://t.me/+4aLsnP6JHhY4YTY1)
+* <img src="https://user-images.githubusercontent.com/50621007/183283867-56b4d69f-bc6e-4939-b00a-72aa019d1aea.png" width="30"/> <a href="https://t.me/VNBnodegroup" target="_blank">VNBnode Group</a>
 
-Telegram Channel: [https://VNBnode\_news](https://t.me/+IpfWe\_pX7UlkMzY1)
+* <img src="https://user-images.githubusercontent.com/50621007/183283867-56b4d69f-bc6e-4939-b00a-72aa019d1aea.png" width="30"/> <a href="https://t.me/Vnbnode" target="_blank">VNBnode News</a>
 
-Website: [https://VNBnode.com](https://vnbnode.com)&#x20;
+* <img src="https://raw.githubusercontent.com/vnbnode/binaries/main/Logo/VNBnode.jpg" width="30"/> <a href="https://VNBnode.com" target="_blank">VNBnode</a>

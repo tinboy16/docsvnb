@@ -1,143 +1,128 @@
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+// @ts-check
+import { themes as prismThemes } from 'prism-react-renderer';
 
-// With JSDoc @type annotations, IDEs can provide config autocompletion
-/** @type {import('@docusaurus/types').DocusaurusConfig} */
-(module.exports = {
-  title: 'VNBnode',
+/**
+ * @type {import('@docusaurus/types').Config}
+ */
+const config = {
+  title: 'VNBnode Docs',
   tagline: 'VietNam Blockchain',
-  url: 'https://docs.vnbnode.com',
+  favicon: 'img/favicon.ico',
+  url: 'https://docs.vnbnode.com/',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.ico',
-  organizationName: 'VNBnode', // Usually your GitHub org/user name.
-  projectName: 'Docs', // Usually your repo name.
-
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['en'],
+  },
   presets: [
     [
-      '@docusaurus/preset-classic',
-      /** @type {import('@docusaurus/preset-classic').Options} */
-      ({
+      'classic',
+      {
         docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
-          editUrl: 'https://github.com/vnbnode/VNBnode-Guides/edit/main/',
+          sidebarPath: './sidebars.js',
+          editUrl: 'https://github.com/vnbnode/docs/edit/main/',
         },
         blog: {
           showReadingTime: true,
-          // Please change this to your repo.
-          editUrl:
-            'https://github.com/vnbnode/VNBnode-Guides/edit/main/website/blog/',
+          editUrl: 'https://github.com/vnbnode/blog/edit/main/',
         },
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: './src/css/custom.css',
         },
-        plugins: [
-          '@docusaurus/plugin-search',
-          '@docusaurus/theme-live-codeblock',
-        ],
-
-      }),
+      },
     ],
   ],
-
-  themeConfig:
-    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-    ({
-      liveCodeBlock: {
-        /**
-         * The position of the live playground, above or under the editor
-         * Possible values: "top" | "bottom"
-         */
-        playgroundPosition: 'bottom',
+  themeConfig: {
+    image: 'img/docusaurus-social-card.jpg',
+    navbar: {
+      title: 'VNBnode',
+      logo: {
+        alt: 'VNBnode Logo',
+        src: 'img/logo.svg',
       },
-      navbar: {
-        title: 'VNBnode',
-        logo: {
-          alt: 'VNBnode Logo',
-          src: 'img/logo.svg',
+      items: [
+        {
+          type: 'docSidebar',
+          sidebarId: 'tutorialSidebar',
+          position: 'left',
+          label: 'Tutorial',
         },
-        items: [
-          {
-            type: 'doc',
-            docId: 'intro',
-            position: 'left',
-            label: 'Tutorial',
-          },
-          {to: '/blog', label: 'Blog', position: 'left'},
-          {
-            href: 'https://github.com/vnbnode',
-            label: 'GitHub',
-            position: 'right',
-          },
-          {
-            href: 'https://twitter.com/vnbnode',
-            label: 'Twitter',
-            position: 'right',
-          },
-          {
-            href :'https://t.me/VNBnodegroup',
-            label: 'Telegram',
-            position: 'right',
-          },
-        ],
-      },
-      search: {
-        // Các tùy chọn của plugin tìm kiếm
-        // Xem thêm: https://docusaurus.io/docs/search
-        showSearchBar: true,
-        // các tùy chọn khác nếu cần
-      },
-      footer: {
-        style: 'dark',
-        links: [
-          {
-            title: 'Docs',
-            items: [
-              {
-                label: 'Tutorial',
-                to: '/docs/intro',
-              },
-            ],
-          },
-          {
-            title: 'VNBnode',
-            items: [
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/vnbnode',
-              },
-              {
-                label: 'Telegram',
-                href: 'https://t.me/VNBnodegroup',
-              },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/vnbnode',
-              },
-            ],
-          },
-        ],
-        copyright: `Copyright © ${new Date().getFullYear()} VNBnode.com`,
-      },
+        { to: '/blog', label: 'Blog', position: 'left' },
+        {
+          href: 'https://github.com/vnbnode',
+          label: 'GitHub',
+          position: 'right',
+        },
+        {
+          href: 'https://twitter.com/vnbnode',
+          label: 'Twitter',
+          position: 'right',
+        },
+        {
+          href: 'https://t.me/VNBnodegroup',
+          label: 'Telegram',
+          position: 'right',
+        },
+      ],
+    },
+    algolia: {
+      apiKey: 'd8c6d0ef251886d670b53b1f9cbb416c',
+      indexName: 'vnbnode',
+      contextualSearch: true,
+      appId: '5VV9G0AUW0',
+    },
+    footer: {
+      style: 'dark',
+      links: [
+        {
+          title: 'Docs',
+          items: [
+            {
+              label: 'Tutorial',
+              to: '/docs/intro',
+            },
+          ],
+        },
+        {
+          title: 'VNBnode',
+          items: [
+            {
+              label: 'Discord',
+              href: 'https://discordapp.com/invite/',
+            },
+            {
+              label: 'Twitter',
+              href: 'https://twitter.com/vnbnode',
+            },
+            {
+              label: 'Telegram',
+              href: 'https://t.me/VNBnodegroup',
+            },
+          ],
+        },
+        {
+          title: 'More',
+          items: [
+            {
+              label: 'Blog',
+              to: '/blog',
+            },
+            {
+              label: 'GitHub',
+              href: 'https://github.com/vnbnode',
+            },
+          ],
+        },
+      ],
+      copyright: `Copyright © ${new Date().getFullYear()} VNBnode.com`,
+    },
+    prism: {
+      theme: prismThemes.github,
+      darkTheme: prismThemes.dracula,
+    },
+  },
+};
 
-      prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
-      },
-    }),
-});
+export default config;
